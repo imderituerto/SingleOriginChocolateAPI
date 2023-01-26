@@ -76,6 +76,7 @@ const ChocolateContainer = () => {
                             postChocolate={postChocolate}
                         />}
                     />
+                    
                     <Route path="/all-chocolates" element={
                         <ChocolateList 
                             chocolates={chocolates}
@@ -89,6 +90,7 @@ const ChocolateContainer = () => {
                             updateChocolate={updateChocolate}
                         />} 
                     />
+                
                 </Routes>
 
             </div>
