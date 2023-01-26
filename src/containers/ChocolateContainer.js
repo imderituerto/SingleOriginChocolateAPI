@@ -62,7 +62,7 @@ const ChocolateContainer = () => {
 
                 <ul>
                     <li>
-                        <Link to="/all-chocolates">All Chocolates</Link>
+                        <Link to="/all-chocolates">All chocolates</Link>
                     </li>
                     <li>
                         <Link to="/new-chocolate">Add new chocolate</Link>
@@ -87,6 +87,7 @@ const ChocolateContainer = () => {
                     <Route path="/edit-chocolate/:id" element={
                         <EditChocolate 
                             chocolates={chocolates}
+                            estates={estates}
                             updateChocolate={updateChocolate}
                         />} 
                     />

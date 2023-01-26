@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 
-const Chocolate = ({chocolate, deleteChocolate}) => {
+const Chocolate = ({chocolate, deleteChocolate, updateChocolate}) => {
 
 
     const handleDeleteChocolate = () => {
         deleteChocolate(chocolate.id);
+    }
+
+    const handleEditChocolate = () => {
+        updateChocolate(chocolate.id);
     }
 
     return (
@@ -13,7 +17,12 @@ const Chocolate = ({chocolate, deleteChocolate}) => {
             <p>Estate: {chocolate.estate.name}</p>
             <p>Cocoa %: {chocolate.cocoaPercentage}</p>
             <button onClick={handleDeleteChocolate}>
-                delete
+                Delete
+            </button>
+            <button>
+            <Link to={`/edit-chocolate/${chocolate.id}`} onClick={handleEditChocolate}>
+                Edit
+            </Link>
             </button>
             <hr />
         </>
